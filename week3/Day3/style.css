@@ -1,0 +1,35 @@
+body {
+    background-color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+p {
+    color: pink;
+    font-size: 20px;
+    text-align: center;
+}
+.box
+{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 20px;
+}
+button
+{
+    padding: 10px 20px;
+    background-color: white;
+    color: blue;
+    border: 2px solid black;
+    cursor: pointer;
+}
+button:hover
+{
+    background-color: black;
+    color: white;
+}
