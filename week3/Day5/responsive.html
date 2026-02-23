@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design - Percentage Width & Media Queries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-logo">ResponsiveWeb</div>
+            <button class="hamburger">☰</button>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Responsive Design Demo</h1>
+            <p>Percentage Width & Media Queries in Action</p>
+            <button class="cta-btn">Learn More</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>What is Responsive Design?</h2>
+        <div class="about-content">
+            <p>Responsive web design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes. It automatically adjusts layout, images, and text to provide an optimal viewing experience.</p>
+        </div>
+    </section>
+
+    <!-- Features Section with Grid -->
+    <section id="features" class="features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile First</h3>
+                <p>Designed for mobile devices with percentage widths</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <h3>Media Queries</h3>
+                <p>Adapts layout based on screen size breakpoints</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Flexible Layout</h3>
+                <p>Uses percentage-based widths for all elements</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast & Smooth</h3>
+                <p>Optimized performance across all devices</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="main-content">
+                <h2>Understanding Percentage Widths</h2>
+                <p>All widths in this design use percentages instead of fixed pixels. This allows elements to scale proportionally with the screen size.</p>
+                <h3>Examples:</h3>
+                <ul>
+                    <li><strong>Container:</strong> 90% - main content area</li>
+                    <li><strong>Section:</strong> 95% - full-width sections</li>
+                    <li><strong>Sidebar:</strong> 30% on desktop, 100% on mobile</li>
+                    <li><strong>Padding:</strong> 5%, 3%, 2% - responsive spacing</li>
+                </ul>
+            </div>
+            <aside class="sidebar">
+                <h3>Quick Facts</h3>
+                <ul>
+                    <li>Mobile-first approach</li>
+                    <li>3 breakpoints: 768px, 1024px</li>
+                    <li>All widths in percentages</li>
+                    <li>Touch-friendly buttons</li>
+                    <li>Flexible images</li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Breakpoints Info Section -->
+    <section class="breakpoints">
+        <h2>Responsive Breakpoints</h2>
+        <div class="breakpoints-grid">
+            <div class="breakpoint-card">
+                <h3>Mobile</h3>
+                <p><strong>Width:</strong> &lt; 768px</p>
+                <p>Single column layout, hamburger menu, full-width elements</p>
+            </div>
+            <div class="breakpoint-card">
+                <h3>Tablet</h3>
+                <p><strong>Width:</strong> 768px - 1023px</p>
+                <p>2-column layout, side-by-side navigation, optimized spacing</p>
+            </div>
+            <div class="breakpoint-card">
+                <h3>Desktop</h3>
+                <p><strong>Width:</strong> ≥ 1024px</p>
+                <p>Multi-column layout, full navigation, sidebar visible</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Responsive Design Demo. All rights reserved.</p>
+        <p>Built with HTML, CSS, and Percentage-Based Responsive Design</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
