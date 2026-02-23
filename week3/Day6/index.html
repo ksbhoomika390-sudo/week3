@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics - Alert, Form Validation, Calculator, Text Change</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🔧 JavaScript Basics Tutorial</h1>
+            <p>Learn: Alert, Form Validation, Calculator, Text Change</p>
+        </header>
+
+        <!-- Section 1: Alert on Button Click -->
+        <section class="section alert-section">
+            <h2>1️⃣ Alert on Button Click</h2>
+            <p>Click the button to see an alert message</p>
+            <button class="btn btn-alert" onclick="showAlert()">Click Me - Show Alert</button>
+        </section>
+
+        <!-- Section 2: Change Text on Click -->
+        <section class="section text-change-section">
+            <h2>2️⃣ Change Text on Click</h2>
+            <p id="changeText">Original Text - Click Me to Change!</p>
+            <button class="btn btn-change" onclick="changeText()">Change Text</button>
+            <button class="btn btn-reset" onclick="resetText()">Reset Text</button>
+        </section>
+
+        <!-- Section 3: Form Validation -->
+        <section class="section form-section">
+            <h2>3️⃣ Form Validation</h2>
+            <form id="validationForm" onsubmit="validateForm(event)">
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                    <span class="error-msg" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <span class="error-msg" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" placeholder="Enter 10-digit number" required>
+                    <span class="error-msg" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Min 6 characters" required>
+                    <span class="error-msg" id="passwordError"></span>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to Terms & Conditions</label>
+                    <span class="error-msg" id="termsError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-submit">Submit Form</button>
+                <button type="reset" class="btn btn-reset">Clear Form</button>
+            </form>
+            <div id="formSuccess" class="success-msg"></div>
+        </section>
+
+        <!-- Section 4: Simple Calculator -->
+        <section class="section calculator-section">
+            <h2>4️⃣ Simple Calculator</h2>
+            <div class="calculator">
+                <div class="display">
+                    <input type="text" id="calculatorDisplay" readonly placeholder="0">
+                </div>
+                <div class="calculator-grid">
+                    <button class="calc-btn calc-clear" onclick="clearCalculator()">C</button>
+                    <button class="calc-btn calc-operator" onclick="appendOperator('/')">÷</button>
+                    <button class="calc-btn calc-operator" onclick="appendOperator('*')">×</button>
+                    <button class="calc-btn calc-operator" onclick="appendOperator('-')">−</button>
+
+                    <button class="calc-btn calc-number" onclick="appendNumber('7')">7</button>
+                    <button class="calc-btn calc-number" onclick="appendNumber('8')">8</button>
+                    <button class="calc-btn calc-number" onclick="appendNumber('9')">9</button>
+                    <button class="calc-btn calc-operator" onclick="appendOperator('+')">+</button>
+
+                    <button class="calc-btn calc-number" onclick="appendNumber('4')">4</button>
+                    <button class="calc-btn calc-number" onclick="appendNumber('5')">5</button>
+                    <button class="calc-btn calc-number" onclick="appendNumber('6')">6</button>
+                    <button class="calc-btn calc-delete" onclick="deleteLastChar()">⌫</button>
+
+                    <button class="calc-btn calc-number" onclick="appendNumber('1')">1</button>
+                    <button class="calc-btn calc-number" onclick="appendNumber('2')">2</button>
+                    <button class="calc-btn calc-number" onclick="appendNumber('3')">3</button>
+                    <button class="calc-btn calc-decimal" onclick="appendDecimal('.')">.</button>
+
+                    <button class="calc-btn calc-number" style="grid-column: 1/3;" onclick="appendNumber('0')">0</button>
+                    <button class="calc-btn calc-equals" onclick="calculateResult()">=</button>
+                </div>
+            </div>
+            <div id="calcResult" class="calc-history"></div>
+        </section>
+
+        <!-- Section 5: Combined Demo -->
+        <section class="section demo-section">
+            <h2>5️⃣ Combined Demo - Interactive Button</h2>
+            <button class="btn btn-demo" onclick="interactiveDemo()">
+                <span id="demoText">Click Me!</span>
+            </button>
+            <p id="demoMessage"></p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 JavaScript Basics. Learn & Practice JavaScript Fundamentals.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
